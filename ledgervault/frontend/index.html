@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LedgerVault</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>LedgerVault</h1>
+    <span id="whoami"></span>
+  </header>
+
+  <main>
+    <section id="login-view">
+      <h2>Sign in</h2>
+      <input id="email" placeholder="email" value="alice@aozora.example" />
+      <input id="password" type="password" placeholder="password" value="Password123!" />
+      <button onclick="login()">Login</button>
+      <p class="err" id="login-err"></p>
+    </section>
+
+    <section id="app-view" style="display:none">
+      <div class="cols">
+        <div class="col">
+          <h2>Documents</h2>
+          <ul id="docs"></ul>
+        </div>
+        <div class="col">
+          <h2>Document detail</h2>
+          <div id="doc-detail">Select a document.</div>
+          <h3>Comments</h3>
+          <div id="comments"></div>
+          <input id="comment-body" placeholder="Add a comment" />
+          <button onclick="addComment()">Post</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
